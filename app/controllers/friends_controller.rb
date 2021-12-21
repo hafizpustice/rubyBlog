@@ -3,7 +3,10 @@ class FriendsController < ApplicationController
 
   # GET /friends or /friends.json
   def index
+    user = User.create(email: "David", encrypted_password: "Code Artist")
+
     @friends = Friend.all
+    puts @friends
   end
 
   # GET /friends/1 or /friends/1.json
