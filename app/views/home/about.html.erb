@@ -3,3 +3,17 @@
 <p>
 <%= @about_me %>
 </p>
+
+<h1>
+<% if user_signed_in?  %>
+
+<%= current_user.inspect %>
+
+<% end %>
+
+
+</h1>
+
+<h3>
+<%=  @users.inspect %>
+</h3>

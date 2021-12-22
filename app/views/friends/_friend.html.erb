@@ -10,5 +10,12 @@
       <td>  <%= friend.phone %></td>
       <td> <%= friend.twitter %></td>
 
+       <td>
+        <% if friend.user %>
+        <%= friend.user.email %>
+        <% end %>
+        
+        </td>
+
       <td>  <%= link_to "Show this friend", friend %> <td>
     </tr>
