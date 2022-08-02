@@ -5,7 +5,15 @@ Rails.application.routes.draw do
   end
   resources :friends
   get 'home/index'
-  get 'home/about'
+
+
+  # scope '/hello' do
+  #   get 'home/about'
+  # end
+
+  scope shallow_path: "sekret" do
+    get 'home/about',  shallow: true
+  end
 
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
